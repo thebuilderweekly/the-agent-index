@@ -25,10 +25,10 @@ The full inclusion criterion, the Tier 1 / Tier 2 framework, and the list of del
 - [MCP Ecosystem](#mcp-ecosystem) (3)
 - [Scheduling and Orchestration](#scheduling-and-orchestration) (3)
 - [Vector Stores](#vector-stores) (5)
-- [Voice and Speech](#voice-and-speech) (5)
-- [Web Search and Retrieval](#web-search-and-retrieval) (4)
+- [Voice and Speech](#voice-and-speech) (4)
+- [Web Search and Retrieval](#web-search-and-retrieval) (3)
 
-**40 entries across 11 categories.**
+**38 entries across 11 categories.**
 
 ---
 
@@ -350,25 +350,9 @@ High-fidelity voice synthesis with voice cloning, streaming TTS, and a conversat
 
 **Integration:** REST API · **Homepage:** [ElevenLabs](https://elevenlabs.io) · **Docs:** [https://elevenlabs.io/docs](https://elevenlabs.io/docs)
 
-### TalkAPI
-
-Mobile voice recording with a public REST API designed for AI agents to consume.
-
-> Mobile voice recording with a REST API designed for agents to consume as input. Humans record on a phone; agents read the audio, the transcript, and structured metadata through a clean endpoint. The category is narrow because most voice recorders either have no API or export only raw audio files; TalkAPI is the counter-example built specifically for the agent-as-consumer case.
-
-**Integration:** REST API · **Homepage:** [TalkAPI](https://talkapi.com)
-
 ---
 
 ## Web Search and Retrieval
-
-### Crawlbeam
-
-AI crawler visibility and repair layer for client-side rendered websites.
-
-> Client-side-rendered sites are invisible to most AI crawlers, which means agents searching the web cannot find content that lives behind React or Vue. Crawlbeam diagnoses which crawlers actually see the page, quantifies the gap, and ships a repair layer. Narrow category and tight scope; only matters when a site renders with JavaScript, but when it does, nothing else built on top reaches agents until this works.
-
-**Integration:** REST API · **Homepage:** [Crawlbeam](https://crawlbeam.com)
 
 ### Exa
 
