@@ -38,7 +38,7 @@ The substrate of agent operation. Every agent needs a model to call, and the mod
 </details>
 
 <details>
-<summary><strong>Anthropic API</strong></summary>
+<summary>Anthropic API - <strong>Claude models via REST API</strong> - <a href="https://anthropic.com">Website</a></summary>
 
 Claude models (Sonnet, Opus, Haiku) via REST API with native tool-use, extended thinking, and MCP support.
 
@@ -49,7 +49,7 @@ The default model for most agent workflows in 2026. Strong tool-use, reliable st
 </details>
 
 <details>
-<summary><strong>Google Gemini API</strong></summary>
+<summary>Google Gemini API - <strong>Gemini models with multimodal</strong> - <a href="https://ai.google.dev">Website</a></summary>
 
 Gemini 3 Pro and Flash models with native multimodal input, 2M token context, and image generation.
 
@@ -60,7 +60,7 @@ The model to reach for when the job involves images, video, audio, or very long 
 </details>
 
 <details>
-<summary><strong>Groq</strong></summary>
+<summary>Groq - <strong>Ultra-low-latency LLM inference</strong> - <a href="https://groq.com">Website</a></summary>
 
 Ultra-low-latency inference for open models (Llama, Mixtral, Qwen) on custom LPU silicon.
 
@@ -71,7 +71,7 @@ When you need token latency measured in milliseconds, not hundreds of millisecon
 </details>
 
 <details>
-<summary><strong>OpenAI API</strong></summary>
+<summary>OpenAI API - <strong>GPT models and embeddings</strong> - <a href="https://openai.com/api">Website</a></summary>
 
 GPT-4 class models, embeddings, image generation, and the Responses API via REST.
 
@@ -82,7 +82,7 @@ Still the default for a lot of production agents. Embeddings are cheap and relia
 </details>
 
 <details>
-<summary><strong>Together AI</strong></summary>
+<summary>Together AI - <strong>Hosted open model inference</strong> - <a href="https://together.ai">Website</a></summary>
 
 Hosted inference for hundreds of open models plus dedicated endpoints and fine-tuning.
 
@@ -104,7 +104,7 @@ Tools that give agents persistent state across sessions. An agent writes what it
 </details>
 
 <details>
-<summary><strong>Letta</strong></summary>
+<summary>Letta - <strong>Stateful agent memory platform</strong> ⭐ 22.0k - <a href="https://github.com/letta-ai/letta">GitHub</a></summary>
 
 Stateful agent platform with persistent memory, context management, and a REST API for agent servers.
 
@@ -115,7 +115,7 @@ The team that shipped MemGPT turned it into a platform. Letta lets you spin up a
 </details>
 
 <details>
-<summary><strong>Mem0</strong></summary>
+<summary>Mem0 - <strong>Persistent memory for agents</strong> ⭐ 52.7k - <a href="https://github.com/mem0ai/mem0">GitHub</a></summary>
 
 Persistent memory layer for AI agents with user-scoped storage, semantic recall, and fact extraction.
 
@@ -126,7 +126,7 @@ Persistent memory primitives for agents, with semantic recall and user-scoped st
 </details>
 
 <details>
-<summary><strong>Zep</strong></summary>
+<summary>Zep - <strong>Temporal knowledge graph memory</strong> ⭐ 4.4k - <a href="https://github.com/getzep/zep">GitHub</a></summary>
 
 Long-term memory for AI agents built on a temporal knowledge graph (Graphiti).
 
@@ -148,7 +148,7 @@ Retrieval databases that store embeddings and return semantically similar result
 </details>
 
 <details>
-<summary><strong>Chroma</strong></summary>
+<summary>Chroma - <strong>Open-source embedding database</strong> ⭐ 27.4k - <a href="https://github.com/chroma-core/chroma">GitHub</a></summary>
 
 Embedded and hosted vector database with a simple Python-first API, popular for RAG prototyping.
 
@@ -159,7 +159,7 @@ The shortest path from zero to a working RAG loop. Chroma starts as an embedded 
 </details>
 
 <details>
-<summary><strong>Pinecone</strong></summary>
+<summary>Pinecone - <strong>Managed vector database</strong> - <a href="https://pinecone.io">Website</a></summary>
 
 Fully managed vector database with serverless indexes, hybrid search, and metadata filtering.
 
@@ -170,7 +170,7 @@ The managed option most teams start with when they need vector search and do not
 </details>
 
 <details>
-<summary><strong>Qdrant</strong></summary>
+<summary>Qdrant - <strong>Rust-based vector search engine</strong> ⭐ 30.2k - <a href="https://github.com/qdrant/qdrant">GitHub</a></summary>
 
 Rust-based vector search engine with strong filtering, sparse vector support, and a managed cloud.
 
@@ -181,7 +181,7 @@ Fast, honest, and easy to run yourself. Qdrant is written in Rust, which is not 
 </details>
 
 <details>
-<summary><strong>Turbopuffer</strong></summary>
+<summary>Turbopuffer - <strong>Object-storage vector database</strong> - <a href="https://turbopuffer.com">Website</a></summary>
 
 Object-storage-native vector database designed to store billions of vectors cheaply on S3.
 
@@ -192,7 +192,7 @@ The pricing model alone is worth the category. Turbopuffer keeps the index on ob
 </details>
 
 <details>
-<summary><strong>Weaviate</strong></summary>
+<summary>Weaviate - <strong>Open-source vector database</strong> ⭐ 16.0k - <a href="https://github.com/weaviate/weaviate">GitHub</a></summary>
 
 Open-source vector database with native hybrid search, multi-tenancy, and generative modules.
 
@@ -214,7 +214,7 @@ APIs that turn audio into text or text into audio. Agents that operate on phone 
 </details>
 
 <details>
-<summary><strong>AssemblyAI</strong></summary>
+<summary>AssemblyAI - <strong>Speech intelligence and transcription</strong> - <a href="https://assemblyai.com">Website</a></summary>
 
 Speech intelligence API with transcription, speaker diarization, sentiment, and topic extraction.
 
@@ -225,7 +225,7 @@ When the job is not just transcription but understanding what is in the audio. A
 </details>
 
 <details>
-<summary><strong>Cartesia</strong></summary>
+<summary>Cartesia - <strong>Sub-100ms streaming TTS</strong> - <a href="https://cartesia.ai">Website</a></summary>
 
 State-space-model TTS with sub-100ms first-token latency and streaming voice synthesis.
 
@@ -236,7 +236,7 @@ Sub-100ms first-token TTS, which is the latency floor for synthesis that feels l
 </details>
 
 <details>
-<summary><strong>Deepgram</strong></summary>
+<summary>Deepgram - <strong>Real-time speech-to-text</strong> - <a href="https://deepgram.com">Website</a></summary>
 
 Speech-to-text and text-to-speech APIs tuned for low latency and real-time agent pipelines.
 
@@ -247,7 +247,7 @@ The STT pipeline that can actually keep up with a live agent loop. Deepgram Nova
 </details>
 
 <details>
-<summary><strong>ElevenLabs</strong></summary>
+<summary>ElevenLabs - <strong>Voice cloning and synthesis</strong> - <a href="https://elevenlabs.io">Website</a></summary>
 
 High-fidelity voice synthesis with voice cloning, streaming TTS, and a conversational agent API.
 
@@ -269,7 +269,7 @@ Infrastructure for agents to act on websites that don't have APIs. The agent dri
 </details>
 
 <details>
-<summary><strong>Browserbase</strong></summary>
+<summary>Browserbase - <strong>Headless browser infrastructure</strong> - <a href="https://browserbase.com">Website</a></summary>
 
 Managed headless browser infrastructure for AI agents with session recording, live view, and stealth.
 
@@ -280,7 +280,7 @@ Agents need browsers the same way humans need browsers, and running Chromium you
 </details>
 
 <details>
-<summary><strong>Stagehand</strong></summary>
+<summary>Stagehand - <strong>Natural-language browser automation</strong> ⭐ 22.0k - <a href="https://github.com/browserbase/stagehand">GitHub</a></summary>
 
 High-level browser automation library that lets agents describe actions in natural language.
 
@@ -291,7 +291,7 @@ Stagehand is what happens when you stop writing Playwright selectors and let the
 </details>
 
 <details>
-<summary><strong>Steel Browser</strong></summary>
+<summary>Steel Browser - <strong>Open-source browser API</strong> ⭐ 6.8k - <a href="https://github.com/steel-dev/steel-browser">GitHub</a></summary>
 
 Open-source browser API for AI agents with session persistence, proxies, and CAPTCHA handling.
 
@@ -313,7 +313,7 @@ Sandboxed environments where agents can run code they wrote without breaking the
 </details>
 
 <details>
-<summary><strong>Daytona</strong></summary>
+<summary>Daytona - <strong>Dev environments for agents</strong> ⭐ 72.3k - <a href="https://github.com/daytonaio/daytona">GitHub</a></summary>
 
 Open-source development environments on demand for AI agents to read, edit, and execute codebases.
 
@@ -324,7 +324,7 @@ Where E2B is for running code, Daytona is for giving an agent a full development
 </details>
 
 <details>
-<summary><strong>E2B</strong></summary>
+<summary>E2B - <strong>Cloud code sandboxes</strong> ⭐ 11.7k - <a href="https://github.com/e2b-dev/e2b">GitHub</a></summary>
 
 Secure cloud sandboxes for AI agents to run code, render files, and execute long-running processes.
 
@@ -335,7 +335,7 @@ The first code sandbox that felt like it was designed for agents, not humans. Ag
 </details>
 
 <details>
-<summary><strong>Modal</strong></summary>
+<summary>Modal - <strong>Serverless Python and GPUs</strong> - <a href="https://modal.com">Website</a></summary>
 
 Serverless cloud platform for running Python functions, GPU jobs, and containers on demand.
 
@@ -346,7 +346,7 @@ Modal turned serverless Python into something you can actually build agents on t
 </details>
 
 <details>
-<summary><strong>Riza</strong></summary>
+<summary>Riza - <strong>Sandboxed code interpreter API</strong> - <a href="https://riza.io">Website</a></summary>
 
 Secure code interpreter API for LLM-generated code with fast-start sandboxes and memory isolation.
 
@@ -368,7 +368,7 @@ Search APIs and content extraction tools that turn the open web into structured 
 </details>
 
 <details>
-<summary><strong>Exa</strong></summary>
+<summary>Exa - <strong>Neural web search API</strong> - <a href="https://exa.ai">Website</a></summary>
 
 Neural web search API designed for LLMs, with semantic matching, live-crawled content, and similarity queries.
 
@@ -379,7 +379,7 @@ Exa indexed the web the way an agent wants to search it. Instead of matching key
 </details>
 
 <details>
-<summary><strong>Firecrawl</strong></summary>
+<summary>Firecrawl - <strong>Web scraping and crawling API</strong> ⭐ 107.6k - <a href="https://github.com/mendableai/firecrawl">GitHub</a></summary>
 
 Scrape any website into clean markdown or structured data with a single API call, including JS-rendered pages.
 
@@ -390,7 +390,7 @@ The 'turn a URL into readable markdown' service that agents actually use. Firecr
 </details>
 
 <details>
-<summary><strong>Tavily</strong></summary>
+<summary>Tavily - <strong>Search API for AI agents</strong> - <a href="https://tavily.com">Website</a></summary>
 
 Search API built specifically for AI agents with grounded answers, source citations, and news search.
 
@@ -412,7 +412,7 @@ Tools that handle when agent work runs and whether it actually completed. Agents
 </details>
 
 <details>
-<summary><strong>CueAPI</strong></summary>
+<summary>CueAPI - <strong>Accountability API for agents</strong> ⭐ 5 - <a href="https://github.com/cueapi/cueapi-core">GitHub</a></summary>
 
 Scheduling and execution accountability API for AI agents with verified outcomes and retries.
 
@@ -423,7 +423,7 @@ Cron fires jobs. Cue knows whether they succeeded. The distinction matters the m
 </details>
 
 <details>
-<summary><strong>Inngest</strong></summary>
+<summary>Inngest - <strong>Durable execution platform</strong> ⭐ 5.2k - <a href="https://github.com/inngest/inngest">GitHub</a></summary>
 
 Durable execution platform for background jobs, AI workflows, and long-running agent steps.
 
@@ -434,7 +434,7 @@ Durable execution for agent workflows that cannot fit inside a single request. I
 </details>
 
 <details>
-<summary><strong>Trigger.dev</strong></summary>
+<summary>Trigger.dev - <strong>Background jobs for AI</strong> ⭐ 14.5k - <a href="https://github.com/triggerdotdev/trigger.dev">GitHub</a></summary>
 
 Background job platform with built-in AI task support, concurrency controls, and wait-until-event primitives.
 
@@ -456,7 +456,7 @@ APIs for agents to send messages outward to humans. Email, SMS, push notificatio
 </details>
 
 <details>
-<summary><strong>Resend</strong></summary>
+<summary>Resend - <strong>Transactional email API</strong> - <a href="https://resend.com">Website</a></summary>
 
 Developer-first transactional email API with React Email integration and high deliverability.
 
@@ -467,7 +467,7 @@ The transactional email API that feels designed for agents to call rather than h
 </details>
 
 <details>
-<summary><strong>SendGrid</strong></summary>
+<summary>SendGrid - <strong>Email delivery infrastructure</strong> - <a href="https://sendgrid.com">Website</a></summary>
 
 Email delivery infrastructure for transactional and marketing mail at high volume.
 
@@ -489,7 +489,7 @@ Layers that let agents authenticate to external services without human-in-the-lo
 </details>
 
 <details>
-<summary><strong>Arcade AI</strong></summary>
+<summary>Arcade AI - <strong>Authenticated tool-calling platform</strong> - <a href="https://arcade.dev">Website</a></summary>
 
 Authenticated tool-calling platform for agents with permissioned actions and per-user credential storage.
 
@@ -500,7 +500,7 @@ Arcade's bet is that tool-calling is not complete until the auth story is. Agent
 </details>
 
 <details>
-<summary><strong>Composio</strong></summary>
+<summary>Composio - <strong>Managed OAuth and integrations</strong> ⭐ 27.7k - <a href="https://github.com/ComposioHQ/composio">GitHub</a></summary>
 
 Tool and credential management platform for AI agents with 250+ pre-built integrations and OAuth handling.
 
@@ -511,7 +511,7 @@ Agents that need to act on behalf of a user hit OAuth the moment they try to do 
 </details>
 
 <details>
-<summary><strong>Metorial</strong></summary>
+<summary>Metorial - <strong>Managed MCP server hosting</strong> - <a href="https://metorial.com">Website</a></summary>
 
 Managed MCP and tool-use platform for AI agents with credential vaulting and usage analytics.
 
@@ -533,7 +533,7 @@ Tools and registries built around the Model Context Protocol — the open standa
 </details>
 
 <details>
-<summary><strong>Context7</strong></summary>
+<summary>Context7 - <strong>Live documentation MCP server</strong> ⭐ 52.4k - <a href="https://github.com/upstash/context7">GitHub</a></summary>
 
 MCP server that feeds agents up-to-date library documentation and code examples from the source.
 
@@ -544,7 +544,7 @@ Coding agents keep hallucinating APIs that do not exist because their training d
 </details>
 
 <details>
-<summary><strong>Model Context Protocol</strong></summary>
+<summary>Model Context Protocol - <strong>MCP standard and reference servers</strong> ⭐ 83.5k - <a href="https://github.com/modelcontextprotocol/servers">GitHub</a></summary>
 
 Open standard for connecting AI agents to tools and data sources, with a reference server collection.
 
@@ -555,7 +555,7 @@ The protocol under a lot of the rest of this list. MCP defined the shape of how 
 </details>
 
 <details>
-<summary><strong>Smithery</strong></summary>
+<summary>Smithery - <strong>MCP server registry</strong> - <a href="https://smithery.ai">Website</a></summary>
 
 MCP server registry and hosting with one-click install for Claude, Cursor, and other MCP clients.
 
