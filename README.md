@@ -12,23 +12,24 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 
 ## Categories
 
-- [LLM Inference](#llm-inference-5) (5)
+- [LLM Inference](#llm-inference-6) (6)
 - [Memory](#memory-3) (3)
 - [Vector Stores](#vector-stores-5) (5)
-- [Voice and Speech](#voice-and-speech-4) (4)
-- [Browser Automation](#browser-automation-3) (3)
+- [Voice and Speech](#voice-and-speech-5) (5)
+- [Browser Automation](#browser-automation-4) (4)
 - [Code Execution](#code-execution-4) (4)
-- [Web Search and Retrieval](#web-search-and-retrieval-3) (3)
-- [Scheduling and Orchestration](#scheduling-and-orchestration-3) (3)
-- [Communication](#communication-2) (2)
+- [Web Search and Retrieval](#web-search-and-retrieval-4) (4)
+- [Scheduling and Orchestration](#scheduling-and-orchestration-4) (4)
+- [Communication](#communication-3) (3)
+- [Guardrails and Safety](#guardrails-and-safety-1) (1)
 - [Credentials and Tool Management](#credentials-and-tool-management-3) (3)
 - [MCP Ecosystem](#mcp-ecosystem-3) (3)
 
-**38 entries across 11 categories.**
+**45 entries across 12 categories.**
 
 ---
 
-## LLM Inference (5)
+## LLM Inference (6)
 
 <details>
 <summary>What this category is for</summary>
@@ -89,6 +90,17 @@ Hosted inference for hundreds of open models plus dedicated endpoints and fine-t
 The default when you want to run a specific open model in production without standing up your own GPU fleet. Model catalog is deep, the pricing is predictable, and fine-tuning is available for cases where a prompt isn't enough. Agents call it exactly like they call OpenAI, which keeps the integration layer simple.
 
 **Integration:** REST API · **Homepage:** [Together AI](https://together.ai) · **Docs:** [https://docs.together.ai](https://docs.together.ai)
+
+</details>
+
+<details>
+<summary>Cerebras Inference - <strong>Wafer-scale ultra-fast LLM inference</strong> - <a href="https://www.cerebras.ai/inference">Website</a></summary>
+
+OpenAI-compatible inference for open models on Cerebras' wafer-scale silicon, with sustained throughput in the thousands of tokens per second.
+
+When latency is the constraint and the inner loop has to feel instant, Cerebras is the one provider shipping the numbers in production. Llama, Qwen, and the smaller frontier-adjacent models run at 2,000+ tok/s, which collapses the gap between "the agent is thinking" and "the agent is responding." The model catalog is narrower than the frontier APIs by design; that trade-off is the point.
+
+**Integration:** REST API (OpenAI-compatible) · **Homepage:** [Cerebras Inference](https://www.cerebras.ai/inference) · **Docs:** [https://inference-docs.cerebras.ai](https://inference-docs.cerebras.ai)
 
 </details>
 
@@ -204,7 +216,7 @@ Open source that is actually operable. Weaviate ships with multi-tenancy built i
 
 ---
 
-## Voice and Speech (4)
+## Voice and Speech (5)
 
 <details>
 <summary>What this category is for</summary>
@@ -257,9 +269,20 @@ The voice synthesis most humans cannot tell from a human. When an agent has to s
 
 </details>
 
+<details>
+<summary>Vapi - <strong>End-to-end voice agent platform</strong> - <a href="https://vapi.ai">Website</a></summary>
+
+A voice agent runtime that wires STT, LLM, and TTS together behind a single API. Define an assistant, attach tools, attach a system prompt, and Vapi handles the WebRTC session, turn-taking, and barge-in.
+
+The fastest path from "I want a voice agent" to "users are talking to a voice agent." Vapi is a platform, not a primitive — agents that want to be in a phone call, on a web page, or running through a Twilio number end up reaching for it because nothing else compresses that stack into one API surface. Phone-number provisioning is the one place a builder bumps into telecom complexity; everything else stays inside the Vapi API.
+
+**Integration:** REST API + WebRTC · **Homepage:** [Vapi](https://vapi.ai) · **Docs:** [https://docs.vapi.ai](https://docs.vapi.ai)
+
+</details>
+
 ---
 
-## Browser Automation (3)
+## Browser Automation (4)
 
 <details>
 <summary>What this category is for</summary>
@@ -298,6 +321,17 @@ Open-source browser API for AI agents with session persistence, proxies, and CAP
 The open-source answer to Browserbase. Run it yourself, wire it into your agent, get session persistence and CAPTCHA solving without paying per-session. If you need browser automation in a private network or at a price point that will not scale linearly with usage, Steel is the move.
 
 **Integration:** REST API · **Homepage:** [Steel Browser](https://steel.dev) · **Docs:** [https://docs.steel.dev](https://docs.steel.dev) · **GitHub:** [https://github.com/steel-dev/steel-browser](https://github.com/steel-dev/steel-browser) · **Open source**
+
+</details>
+
+<details>
+<summary>Hyperbrowser - <strong>Cloud browser sessions for agents</strong> - <a href="https://hyperbrowser.ai">Website</a></summary>
+
+Managed Chromium sessions an agent drives over CDP, with built-in proxy rotation, CAPTCHA handling, and session persistence.
+
+Sits in the same lane as Browserbase but pushes more of the underlying browser surface (cookies, local storage, request interception) into the free tier. Pricing trends aggressive on session-minutes, which matters when an agent is doing dozens of short visits per task. The fingerprinting and proxy stack is good enough that scraping behind soft bot-detection works without extra plumbing.
+
+**Integration:** REST API + CDP · **Homepage:** [Hyperbrowser](https://hyperbrowser.ai) · **Docs:** [https://docs.hyperbrowser.ai](https://docs.hyperbrowser.ai)
 
 </details>
 
@@ -358,7 +392,7 @@ The focused answer to one narrow question: how do I let the model run the code i
 
 ---
 
-## Web Search and Retrieval (3)
+## Web Search and Retrieval (4)
 
 <details>
 <summary>What this category is for</summary>
@@ -400,9 +434,20 @@ Tavily is the search API that picks up the phone. Cleanest developer experience 
 
 </details>
 
+<details>
+<summary>Brave Search API - <strong>Independent web index, REST search</strong> - <a href="https://brave.com/search/api">Website</a></summary>
+
+Search API backed by Brave's own crawled index, not a Bing or Google reseller. Three tiers: free for low-volume agents, pro for higher throughput, AI tier for embed and re-ranking heavy workflows.
+
+The independence angle matters. When an agent's retrieval needs are sensitive to whatever Bing or Google decides to filter that day, an unaffiliated index becomes infrastructure. Result objects are clean JSON, latency is competitive, and rate limits start permissive enough to build a real product without upgrading immediately.
+
+**Integration:** REST API · **Homepage:** [Brave Search API](https://brave.com/search/api) · **Docs:** [https://api-dashboard.search.brave.com/app/documentation](https://api-dashboard.search.brave.com/app/documentation)
+
+</details>
+
 ---
 
-## Scheduling and Orchestration (3)
+## Scheduling and Orchestration (4)
 
 <details>
 <summary>What this category is for</summary>
@@ -444,9 +489,20 @@ Trigger.dev is the other shape of durable execution, leaning harder into AI-spec
 
 </details>
 
+<details>
+<summary>Hatchet - <strong>Durable task orchestration with DAGs</strong> ⭐ 5.6k - <a href="https://github.com/hatchet-dev/hatchet">GitHub</a></summary>
+
+Durable execution engine that runs workflows as code, with native step retries, fan-out/fan-in, and a typed step API. Self-host in Docker or run as Hatchet Cloud.
+
+Sits in a useful gap between Inngest's event-first model and full DAG engines like Temporal — heavier than the former, lighter than the latter. The typed step API and the built-in concurrency primitives are the differentiators when an agent's workflow needs branching that's hard to express in a flat event handler. MIT-licensed at the core.
+
+**Integration:** SDKs (TS, Python, Go, Ruby) + gRPC · **Homepage:** [Hatchet](https://hatchet.run) · **Docs:** [https://docs.hatchet.run](https://docs.hatchet.run) · **GitHub:** [https://github.com/hatchet-dev/hatchet](https://github.com/hatchet-dev/hatchet) · **Open source**
+
+</details>
+
 ---
 
-## Communication (2)
+## Communication (3)
 
 <details>
 <summary>What this category is for</summary>
@@ -474,6 +530,39 @@ Email delivery infrastructure for transactional and marketing mail at high volum
 For when the volume is high and the deliverability numbers matter. The incumbent holds the category because shipping a million emails a day without landing in spam is a genuinely hard problem, and SendGrid has solved it for longer than almost any competitor. Sending from a custom domain requires authenticated domain setup, but every step has a REST endpoint: create the domain, retrieve DNS records, push them through a DNS provider's API, then call the validate-authenticated-domain endpoint. Tier 2 passage on the programmatic-path test: needs DNS credentials alongside the SendGrid API key, but there is no human-gated step.
 
 **Integration:** REST API · **Homepage:** [SendGrid](https://sendgrid.com) · **Docs:** [https://docs.sendgrid.com](https://docs.sendgrid.com)
+
+</details>
+
+<details>
+<summary>Postmark - <strong>Transactional email with high deliverability</strong> - <a href="https://postmarkapp.com">Website</a></summary>
+
+Transactional email API focused on inbox placement, not marketing volume. Fast bounce/spam reporting and a sandbox tier that lets agents test without a verified domain.
+
+The pick when receipts, password resets, magic links, and operational alerts have to actually arrive. Postmark trades volume for reliability and the 99.99% historical uptime numbers back the claim. Like Resend and SendGrid, production sends require SPF/DKIM/DMARC on a custom domain — Tier 2 passage, programmatic via your DNS provider's API.
+
+**Integration:** REST API · **Homepage:** [Postmark](https://postmarkapp.com) · **Docs:** [https://postmarkapp.com/developer](https://postmarkapp.com/developer)
+
+</details>
+
+---
+
+## Guardrails and Safety (1)
+
+<details>
+<summary>What this category is for</summary>
+
+Runtime infrastructure that an agent calls to keep itself out of trouble. Prompt-injection scanners, output content filters, jailbreak detectors, and policy gates that sit between the agent's input and the model, or between the model's output and a downstream tool. Listed tools must let the agent call them programmatically from the first request — no human review of policy configs, no enterprise procurement gating the API key.
+
+</details>
+
+<details>
+<summary>Lakera Guard - <strong>Runtime prompt-injection and content guardrails</strong> - <a href="https://www.lakera.ai/lakera-guard">Website</a></summary>
+
+A scanning API an agent calls before passing user input to the model, and again before passing model output to a downstream tool. Trained on a large corpus of jailbreaks, prompt-injection patterns, and PII templates, with low-latency calls that don't break the agent's loop.
+
+Most agent frameworks have nothing on the input side. Lakera is the closest thing to a default. Self-serve signup with a free tier, REST endpoints for `/guard` (input scanning) and `/guard-output` (output scanning), and policy customization via the dashboard or the API itself. Worth pairing with a structured-output validator on the model side; together they cover both ends of the prompt-to-tool path.
+
+**Integration:** REST API · **Homepage:** [Lakera Guard](https://www.lakera.ai/lakera-guard) · **Docs:** [https://docs.lakera.ai](https://docs.lakera.ai)
 
 </details>
 
