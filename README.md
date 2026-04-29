@@ -100,7 +100,7 @@ OpenAI-compatible inference for open models on Cerebras' wafer-scale silicon, wi
 
 When latency is the constraint and the inner loop has to feel instant, Cerebras is the one provider shipping the numbers in production. Llama, Qwen, and the smaller frontier-adjacent models run at 2,000+ tok/s, which collapses the gap between "the agent is thinking" and "the agent is responding." The model catalog is narrower than the frontier APIs by design; that trade-off is the point.
 
-**Integration:** REST API (OpenAI-compatible) · **Homepage:** [Cerebras Inference](https://www.cerebras.ai/inference) · **Docs:** [https://inference-docs.cerebras.ai](https://inference-docs.cerebras.ai)
+**Integration:** REST API · **Homepage:** [Cerebras Inference](https://www.cerebras.ai/inference) · **Docs:** [https://inference-docs.cerebras.ai](https://inference-docs.cerebras.ai)
 
 </details>
 
@@ -276,7 +276,7 @@ A voice agent runtime that wires STT, LLM, and TTS together behind a single API.
 
 The fastest path from "I want a voice agent" to "users are talking to a voice agent." Vapi is a platform, not a primitive — agents that want to be in a phone call, on a web page, or running through a Twilio number end up reaching for it because nothing else compresses that stack into one API surface. Phone-number provisioning is the one place a builder bumps into telecom complexity; everything else stays inside the Vapi API.
 
-**Integration:** REST API + WebRTC · **Homepage:** [Vapi](https://vapi.ai) · **Docs:** [https://docs.vapi.ai](https://docs.vapi.ai)
+**Integration:** REST API · **Homepage:** [Vapi](https://vapi.ai) · **Docs:** [https://docs.vapi.ai](https://docs.vapi.ai)
 
 </details>
 
@@ -331,7 +331,7 @@ Managed Chromium sessions an agent drives over CDP, with built-in proxy rotation
 
 Sits in the same lane as Browserbase but pushes more of the underlying browser surface (cookies, local storage, request interception) into the free tier. Pricing trends aggressive on session-minutes, which matters when an agent is doing dozens of short visits per task. The fingerprinting and proxy stack is good enough that scraping behind soft bot-detection works without extra plumbing.
 
-**Integration:** REST API + CDP · **Homepage:** [Hyperbrowser](https://hyperbrowser.ai) · **Docs:** [https://docs.hyperbrowser.ai](https://docs.hyperbrowser.ai)
+**Integration:** REST API · **Homepage:** [Hyperbrowser](https://hyperbrowser.ai) · **Docs:** [https://docs.hyperbrowser.ai](https://docs.hyperbrowser.ai)
 
 </details>
 
@@ -496,7 +496,7 @@ Durable execution engine that runs workflows as code, with native step retries, 
 
 Sits in a useful gap between Inngest's event-first model and full DAG engines like Temporal — heavier than the former, lighter than the latter. The typed step API and the built-in concurrency primitives are the differentiators when an agent's workflow needs branching that's hard to express in a flat event handler. MIT-licensed at the core.
 
-**Integration:** SDKs (TS, Python, Go, Ruby) + gRPC · **Homepage:** [Hatchet](https://hatchet.run) · **Docs:** [https://docs.hatchet.run](https://docs.hatchet.run) · **GitHub:** [https://github.com/hatchet-dev/hatchet](https://github.com/hatchet-dev/hatchet) · **Open source**
+**Integration:** SDK · **Homepage:** [Hatchet](https://hatchet.run) · **Docs:** [https://docs.hatchet.run](https://docs.hatchet.run) · **GitHub:** [https://github.com/hatchet-dev/hatchet](https://github.com/hatchet-dev/hatchet) · **Open source**
 
 </details>
 
