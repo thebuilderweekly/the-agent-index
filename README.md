@@ -12,7 +12,7 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 
 ## Categories
 
-- [LLM Inference](#llm-inference-6) (6)
+- [LLM Inference](#llm-inference-7) (7)
 - [Memory](#memory-3) (3)
 - [Vector Stores](#vector-stores-5) (5)
 - [Voice and Speech](#voice-and-speech-5) (5)
@@ -21,15 +21,15 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 - [Web Search and Retrieval](#web-search-and-retrieval-4) (4)
 - [Scheduling and Orchestration](#scheduling-and-orchestration-4) (4)
 - [Communication](#communication-3) (3)
-- [Guardrails and Safety](#guardrails-and-safety-1) (1)
+- [Guardrails and Safety](#guardrails-and-safety-2) (2)
 - [Credentials and Tool Management](#credentials-and-tool-management-3) (3)
 - [MCP Ecosystem](#mcp-ecosystem-3) (3)
 
-**45 entries across 12 categories.**
+**47 entries across 12 categories.**
 
 ---
 
-## LLM Inference (6)
+## LLM Inference (7)
 
 <details>
 <summary>What this category is for</summary>
@@ -101,6 +101,17 @@ OpenAI-compatible inference for open models on Cerebras' wafer-scale silicon, wi
 When latency is the constraint and the inner loop has to feel instant, Cerebras is the one provider shipping the numbers in production. Llama, Qwen, and the smaller frontier-adjacent models run at 2,000+ tok/s, which collapses the gap between "the agent is thinking" and "the agent is responding." The model catalog is narrower than the frontier APIs by design; that trade-off is the point.
 
 **Integration:** REST API · **Homepage:** [Cerebras Inference](https://www.cerebras.ai/inference) · **Docs:** [https://inference-docs.cerebras.ai](https://inference-docs.cerebras.ai)
+
+</details>
+
+<details>
+<summary>Mistral La Plateforme - <strong>European frontier models via REST</strong> - <a href="https://mistral.ai/">Website</a></summary>
+
+Mistral's hosted API for the Mistral Large, Codestral, and the Ministral family, with structured output, function calling, and embeddings on the same surface.
+
+The model catalog to reach for when the choice has to be European-jurisdiction or when Codestral's code-specific tuning is the right tool for the job. La Plateforme's pricing is competitive on the mid-tier, and the function-calling shape matches OpenAI's closely enough that an agent already wired to GPT can swap in with minimal change. Strong Apache 2.0 release cadence on the open-weight side too, which keeps the option of self-hosting alive.
+
+**Integration:** REST API · **Homepage:** [Mistral La Plateforme](https://mistral.ai/) · **Docs:** [https://docs.mistral.ai](https://docs.mistral.ai)
 
 </details>
 
@@ -546,7 +557,7 @@ The pick when receipts, password resets, magic links, and operational alerts hav
 
 ---
 
-## Guardrails and Safety (1)
+## Guardrails and Safety (2)
 
 <details>
 <summary>What this category is for</summary>
@@ -563,6 +574,17 @@ A scanning API an agent calls before passing user input to the model, and again 
 Most agent frameworks have nothing on the input side. Lakera is the closest thing to a default. Self-serve signup with a free tier, REST endpoints for `/guard` (input scanning) and `/guard-output` (output scanning), and policy customization via the dashboard or the API itself. Worth pairing with a structured-output validator on the model side; together they cover both ends of the prompt-to-tool path.
 
 **Integration:** REST API · **Homepage:** [Lakera Guard](https://www.lakera.ai/lakera-guard) · **Docs:** [https://docs.lakera.ai](https://docs.lakera.ai)
+
+</details>
+
+<details>
+<summary>Guardrails AI - <strong>Validators for LLM I/O, OSS + Hub</strong> ⭐ 4.6k - <a href="https://github.com/guardrails-ai/guardrails">GitHub</a></summary>
+
+Open-source framework for adding runtime validators around LLM input and output, with a Hub of pre-built validators for PII detection, jailbreak attempts, hallucination checks, and structured-output enforcement.
+
+The library-first answer to the guardrails problem. An agent imports the SDK, wraps the model call, and gets a validated response or a structured error it can branch on. Pairs well with Lakera Guard: Lakera handles the network-side scanning, Guardrails AI handles the in-process validation and the structured-output contract. The Hub adds plug-in validators without forcing custom code, which is what makes the library a real default rather than a research toy.
+
+**Integration:** Python Library · **Homepage:** [Guardrails AI](https://www.guardrailsai.com) · **Docs:** [https://www.guardrailsai.com/docs](https://www.guardrailsai.com/docs) · **GitHub:** [https://github.com/guardrails-ai/guardrails](https://github.com/guardrails-ai/guardrails) · **Open source**
 
 </details>
 
