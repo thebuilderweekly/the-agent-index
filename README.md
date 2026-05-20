@@ -12,11 +12,11 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 
 ## Categories
 
-- [LLM Inference](#llm-inference-7) (7)
+- [LLM Inference](#llm-inference-8) (8)
 - [Memory](#memory-3) (3)
 - [Vector Stores](#vector-stores-5) (5)
 - [Voice and Speech](#voice-and-speech-5) (5)
-- [Browser Automation](#browser-automation-4) (4)
+- [Browser Automation](#browser-automation-5) (5)
 - [Code Execution](#code-execution-4) (4)
 - [Web Search and Retrieval](#web-search-and-retrieval-4) (4)
 - [Scheduling and Orchestration](#scheduling-and-orchestration-4) (4)
@@ -25,11 +25,11 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 - [Credentials and Tool Management](#credentials-and-tool-management-3) (3)
 - [MCP Ecosystem](#mcp-ecosystem-3) (3)
 
-**47 entries across 12 categories.**
+**49 entries across 12 categories.**
 
 ---
 
-## LLM Inference (7)
+## LLM Inference (8)
 
 <details>
 <summary>What this category is for</summary>
@@ -79,6 +79,17 @@ GPT-4 class models, embeddings, image generation, and the Responses API via REST
 Still the default for a lot of production agents. Embeddings are cheap and reliable, the Responses API finally gives agents a clean way to manage state across turns, and the function-calling shape is the one every other provider copied. Not always the best model for reasoning, but always the most compatible.
 
 **Integration:** REST API · **Homepage:** [OpenAI API](https://openai.com/api) · **Docs:** [https://platform.openai.com/docs](https://platform.openai.com/docs)
+
+</details>
+
+<details>
+<summary>OpenRouter - <strong>Unified API for 300+ models</strong> - <a href="https://openrouter.ai">Website</a></summary>
+
+OpenAI-compatible router that exposes hundreds of frontier and open models behind one API key, one URL, and one pricing surface.
+
+Useful when an agent needs to swap models without rewiring its caller. OpenRouter sits in front of Anthropic, OpenAI, Google, Meta, Mistral, Qwen, DeepSeek, and the long tail in the same OpenAI-compatible shape, so the same prompt can be tried against five providers in a single change. Aggregator economics mean the price is sometimes higher than going direct, but the routing overhead is worth it for agents that pick the cheapest model that clears a benchmark on a per-task basis.
+
+**Integration:** REST API · **Homepage:** [OpenRouter](https://openrouter.ai) · **Docs:** [https://openrouter.ai/docs](https://openrouter.ai/docs)
 
 </details>
 
@@ -293,7 +304,7 @@ The fastest path from "I want a voice agent" to "users are talking to a voice ag
 
 ---
 
-## Browser Automation (4)
+## Browser Automation (5)
 
 <details>
 <summary>What this category is for</summary>
@@ -343,6 +354,17 @@ Managed Chromium sessions an agent drives over CDP, with built-in proxy rotation
 Sits in the same lane as Browserbase but pushes more of the underlying browser surface (cookies, local storage, request interception) into the free tier. Pricing trends aggressive on session-minutes, which matters when an agent is doing dozens of short visits per task. The fingerprinting and proxy stack is good enough that scraping behind soft bot-detection works without extra plumbing.
 
 **Integration:** REST API · **Homepage:** [Hyperbrowser](https://hyperbrowser.ai) · **Docs:** [https://docs.hyperbrowser.ai](https://docs.hyperbrowser.ai)
+
+</details>
+
+<details>
+<summary>Skyvern - <strong>LLM-driven browser automation</strong> - <a href="https://skyvern.com">Website</a></summary>
+
+Open-source browser automation where the LLM reads the rendered page and decides the next click instead of running a brittle Playwright script.
+
+Skyvern automates the kind of web tasks that historically needed a maintained Playwright suite. The agent navigates by reading the rendered DOM, identifying what it needs, and acting, which is how it survives layout changes that would crash a static selector script. The hosted REST API and the self-host path both exist, and the open source license keeps the lock-in story honest for teams that want to run it themselves.
+
+**Integration:** REST API · **Homepage:** [Skyvern](https://skyvern.com) · **Docs:** [https://docs.skyvern.com](https://docs.skyvern.com)
 
 </details>
 
