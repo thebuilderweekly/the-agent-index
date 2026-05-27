@@ -13,19 +13,19 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 ## Categories
 
 - [LLM Inference](#llm-inference-8) (8)
-- [Memory](#memory-3) (3)
+- [Memory](#memory-4) (4)
 - [Vector Stores](#vector-stores-5) (5)
 - [Voice and Speech](#voice-and-speech-5) (5)
 - [Browser Automation](#browser-automation-5) (5)
 - [Code Execution](#code-execution-4) (4)
-- [Web Search and Retrieval](#web-search-and-retrieval-4) (4)
+- [Web Search and Retrieval](#web-search-and-retrieval-5) (5)
 - [Scheduling and Orchestration](#scheduling-and-orchestration-4) (4)
 - [Communication](#communication-3) (3)
 - [Guardrails and Safety](#guardrails-and-safety-2) (2)
 - [Credentials and Tool Management](#credentials-and-tool-management-3) (3)
 - [MCP Ecosystem](#mcp-ecosystem-3) (3)
 
-**49 entries across 12 categories.**
+**51 entries across 12 categories.**
 
 ---
 
@@ -128,12 +128,23 @@ The model catalog to reach for when the choice has to be European-jurisdiction o
 
 ---
 
-## Memory (3)
+## Memory (4)
 
 <details>
 <summary>What this category is for</summary>
 
 Tools that give agents persistent state across sessions. An agent writes what it learned, retrieves it later by meaning rather than by keyword, and updates or deletes it programmatically. Excludes general-purpose databases — those are infrastructure, not memory layers. The bar is a managed or self-hostable service designed specifically for agent memory patterns, not a wrapper around a key-value store.
+
+</details>
+
+<details>
+<summary>Cognee - <strong>Knowledge graph memory for agents</strong> - <a href="https://cognee.ai">Website</a></summary>
+
+Open-source memory layer that builds a queryable knowledge graph from an agent's accumulated context, replacing flat vector retrieval with structured semantic recall.
+
+Useful when an agent's accumulated context becomes large enough that flat vector retrieval starts surfacing noise. Cognee ingests documents, conversations, and outputs into a typed knowledge graph, so retrieval can follow real relationships instead of guessing from cosine similarity. The Python library is the primary surface, with self-host and managed cloud both available; the source is permissive enough to keep the lock-in story honest.
+
+**Integration:** Python Library · **Homepage:** [Cognee](https://cognee.ai) · **Docs:** [https://docs.cognee.ai](https://docs.cognee.ai) · **GitHub:** [https://github.com/topoteretes/cognee](https://github.com/topoteretes/cognee) · **Open source**
 
 </details>
 
@@ -425,7 +436,7 @@ The focused answer to one narrow question: how do I let the model run the code i
 
 ---
 
-## Web Search and Retrieval (4)
+## Web Search and Retrieval (5)
 
 <details>
 <summary>What this category is for</summary>
@@ -453,6 +464,17 @@ Scrape any website into clean markdown or structured data with a single API call
 The 'turn a URL into readable markdown' service that agents actually use. Firecrawl handles JavaScript rendering, rate limiting, and format conversion in one call. When the agent needs the content of a specific page and not a search result summary, this is the tool. Open source core; managed tier for when the crawl gets serious.
 
 **Integration:** REST API · **Homepage:** [Firecrawl](https://firecrawl.dev) · **Docs:** [https://docs.firecrawl.dev](https://docs.firecrawl.dev) · **GitHub:** [https://github.com/mendableai/firecrawl](https://github.com/mendableai/firecrawl) · **Open source**
+
+</details>
+
+<details>
+<summary>Linkup - <strong>Real-time search API for agents</strong> - <a href="https://www.linkup.so">Website</a></summary>
+
+Search API designed for agent consumption, returning ranked results with deep-content extraction and source attribution from the live web.
+
+Linkup is purpose-built for agents that need to ground a response in fresh web data without scraping. The response shape returns ranked sources with content blocks the model can read directly, and supports deep-content extraction so the agent does not have to fetch + parse pages separately. A French startup that has been gaining traction as a Tavily alternative; the editorial copy and API ergonomics show a real focus on agent workflows rather than retrofitting human-first search.
+
+**Integration:** REST API · **Homepage:** [Linkup](https://www.linkup.so) · **Docs:** [https://docs.linkup.so](https://docs.linkup.so)
 
 </details>
 
