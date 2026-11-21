@@ -18,14 +18,14 @@ The full inclusion criterion is in [STANDARDS.md](./STANDARDS.md).
 - [Voice and Speech](#voice-and-speech-5) (5)
 - [Browser Automation](#browser-automation-5) (5)
 - [Code Execution](#code-execution-4) (4)
-- [Web Search and Retrieval](#web-search-and-retrieval-5) (5)
+- [Web Search and Retrieval](#web-search-and-retrieval-6) (6)
 - [Scheduling and Orchestration](#scheduling-and-orchestration-4) (4)
 - [Communication](#communication-3) (3)
 - [Guardrails and Safety](#guardrails-and-safety-2) (2)
 - [Credentials and Tool Management](#credentials-and-tool-management-3) (3)
 - [MCP Ecosystem](#mcp-ecosystem-3) (3)
 
-**51 entries across 12 categories.**
+**52 entries across 12 categories.**
 
 ---
 
@@ -436,7 +436,7 @@ The focused answer to one narrow question: how do I let the model run the code i
 
 ---
 
-## Web Search and Retrieval (5)
+## Web Search and Retrieval (6)
 
 <details>
 <summary>What this category is for</summary>
@@ -497,6 +497,17 @@ Search API backed by Brave's own crawled index, not a Bing or Google reseller. T
 The independence angle matters. When an agent's retrieval needs are sensitive to whatever Bing or Google decides to filter that day, an unaffiliated index becomes infrastructure. Result objects are clean JSON, latency is competitive, and rate limits start permissive enough to build a real product without upgrading immediately.
 
 **Integration:** REST API · **Homepage:** [Brave Search API](https://brave.com/search/api) · **Docs:** [https://api-dashboard.search.brave.com/app/documentation](https://api-dashboard.search.brave.com/app/documentation)
+
+</details>
+
+<details>
+<summary>Datacircle - <strong>Open API for the best GTM APIs</strong> - <a href="https://datacircle.dev">Website</a></summary>
+
+Find the best GTM APIs. Our API is open, with no key: list every API, see who is best for each and search every plan.
+
+An agent picking a data API gets the benchmark result in one call. It lists the APIs, asks which is best for one job and compares plans by price.
+
+**Integration:** REST API · **Homepage:** [Datacircle](https://datacircle.dev) · **Docs:** [https://api.datacircle.dev/v1/openapi.json](https://api.datacircle.dev/v1/openapi.json)
 
 </details>
 
